@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+:root{
+    --Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+    --Pale-Blue: hsl(243, 100%, 93%);
+    --Grayish-Blue: hsl(229, 7%, 55%);
+    --Dark-Blue: hsl(228, 56%, 26%);
+    --Very-Dark-Blue: hsl(229, 57%, 11%);
+}
+
+body{
+    background: url('images/bg-desktop.png') no-repeat left bottom fixed,var(--Very-Dark-Blue);
+    font-family: "Raleway",sans-serif;
+    background-size: 100% 50%;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.logo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    height: 150px;
+    width: 250px;
+    padding: 1rem 0rem 1rem 2rem;
+    background-color: var(--Dark-Blue);
+    border-radius: 10px 5rem 10px 10px;
+    margin-right: 1rem;
+}
+.logo-m img{
+    width: 94px;
+}
+.logo-s{
+    display: flex;
+}
+.logo-s img{
+    border: 8px solid var(--Very-Dark-Blue);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 35px;
+    height: 35px;
+    margin: 0px 0.5rem 0px 0rem;
+    background-color: var(--Very-Dark-Blue);
+}
+.text-container{
+    height: 115px;
+    width: 410px;
+    background-color: var(--Dark-Blue);
+    border-radius: 10px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: hsl(229deg 34% 74%);
+}
+.text-container h5{
+    font-weight: 400;
+}
+.text-container h5 span{
+    color: var(--Pale-Blue);
+    font-weight: 700;
+}
+.storage-left{
+    background-color: #fff;
+    height: 3rem;
+    width: 110px;
+    position: absolute;
+    left: 543px;
+    top: 0px;
+    font-size: 10px;
+    font-weight: 400;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0.5rem 0.5rem;
+    border-radius: 0.4rem;
+}
+.sb-1{
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 10px solid transparent;
+    border-right: 10px solid white;
+    border-top: 10px solid white;
+    border-bottom: 10px solid transparent;
+    left: 90px;
+    top: 44px;
+}
+
+.storage-left span{
+    font-weight: 700;
+    font-size: 20px;
+    color: #000;
+}
+.horizontal-bar{
+    display: flex;
+    height: 13px;
+    align-items: center;
+    background-color: var(--Very-Dark-Blue);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.storage-bar{
+    height: 9px;
+    width: 78%;
+    background: linear-gradient(to right,hsl(6, 100%, 80%) 0% ,hsl(335, 100%, 65%) );
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin: 0rem 0rem 0rem 3px;
+}
+.bar-end{
+    width: 3.5%;
+    height: 9px;
+    margin:0;
+    background:radial-gradient(6px at 50% 50%,#fff , hsl(335,100%,67%));
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.total-storage{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 14px;
+}
+.attribution { 
+    font-size: 11px; text-align: center; 
+    position: absolute;
+    top: 96%;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+
+}
+@media (max-width:800px){
+    body{
+        background: url('images/bg-mobile.png') no-repeat 0px 0px fixed;
+        background-size: 100% 100%;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .logo{
+        width: 250px;
+        margin: 0rem 0rem 1rem 0rem;
+    }
+    .text-container{
+        width: 250px;
+        font-size: 13px;
+        text-align: center;
+    }
+    .storage-left{
+        top: 257px;
+        left: 47px;
+        width: 138px;
+        padding: 0.5rem 0.5rem;
+        font-size: 14px;
+    }
+    .storage-left span{
+        font-size: 2rem;
+    }
+    .sb-1{
+        display: none;
+    }
+    .horizontal-bar{
+        height: 15px;
+    }
+    .storage-bar{
+        width: 76%;
+        height: 12px;
+    }
+    .bar-end{
+        width: 5.5%;
+        height: 12px;
+        background:radial-gradient(5px at 50% 50%,#fff , hsl(335,100%,67%));
+    }
+    .total-storage{
+        font-size: 10px;
+        position: relative;
+        top: -9px;
+    }
+}
